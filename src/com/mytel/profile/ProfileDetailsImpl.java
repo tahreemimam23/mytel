@@ -1,12 +1,13 @@
-package com.project.profile;
+package com.mytel.profile;
 
 import java.util.Scanner;
 
-import com.mytel.optionslist.MytelServices;
+import com.mytel.optionslist.MytelServicesImpl;
 
-public class ProfileDetails {
+public class ProfileDetailsImpl implements ProfileDetails {
 	Scanner scan = new Scanner(System.in);
 
+	@Override
 	public void printProfileDetails() {
 		System.out.println("Enter mobile number:");
 		String number = scan.next();
@@ -15,7 +16,7 @@ public class ProfileDetails {
 			System.out.println("Name: Rahul");
 			System.out.println("Address: Ameerpet, Hyderabad");
 
-			MytelServices mytelServices = new MytelServices();
+			MytelServicesImpl mytelServices = new MytelServicesImpl();
 			mytelServices.selectNextMove();
 
 		} else {
